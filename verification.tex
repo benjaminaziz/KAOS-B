@@ -1,0 +1,33 @@
+     Perhaps the most important aspect in using formal methods in software development is that specifications can be analyzed and verified using mathematical techniques and tools.  There are two approaches for formal verification: model checking and theorem proving (e.g. proof obligations).
+
+\subsection{Model Checking (the proB tool)}
+ 
+Model checking is an automated approach that used to verify correctness and consistency of a model.  The proB tool is one of the B machines-supported tools that test automatically the consistency of the B specification.  The main idea of model checking is that all machine’s nodes (states) are visited to examine whether there exist any potential bugs [5].
+      The proB tool showed that our RBAC specification is correct regarding the system states (nodes).  There was no violation with the system properties and invariant when it comes to the performance of operations.
+
+\subsection{Theorem Proving (Proof Obligations)}
+      The main purpose of theorem proving is to construct a mathematical proof for a mathematical statement to be true [2].  Since formal proofs do not use natural languages, they are expressed in a symbolic language, usually called a proof language.  For abstract machines to be correct and consistent, there are many proof obligations that need to be proven.  Theses proof obligations are for the four main clauses of an abstract machine: PROPERTIES, INVARIANT, INITIALISATION and OPERATIONS, where there is a separate proof obligation for each operation in the machine [5]. 
+      Since our RBAC model doesn’t have properties clause, proof obligations would be for the clauses of INVARIANT, INITIALISATION and OPERATIONS.  Proof obligation for invariant clause is expressed as:
+
+Prp ⇒ ∃ v. I
+
+      Which means that under the assumption that Prp (PROPERTIES clause, if found) is true, then: the invariant I is satisfied by at least one of the machine’s variables v
+     To discharge this obligation, we need to show that there exist values for:
+•	sod1 and sod2, which are subsets of ROLES; where the intersection between them is an empty set.
+•	hasTheRole, which is a relation between USER and ROLES; where:
+-	for any user and two conflicted roles, the concept of SoD is applied;
+-	for any user has the role headteacher, the concept of Role Hierarchy is applied; and
+-	cardinality of users who take the role headmaster is less than or equal to 1. 
+•	staff, teachers, manager, students and studentGuardian, which are subsets of USER; where:
+-	teachers and manager are subsets of staff; and
+-	the intersection between any two subsets is an empty set. 
+•	hisGuardain, which is a partial surjective function between students and studentGuardain.
+
+      Perhaps the easiest way to demonstrate that is to apply the current values of variables in the INITIALISATION clause (i.e. all variables are equal to { }, except the sets of sod1 and sod2).  
+      The proof obligation for INITIALIZATION takes the following predicate: 
+Prp ⇒ [Init] I
+      Which means that under the assumption that Prp (PROPERTIES clause, if found) is true, then: the initialisation clause Init must establish the invariant I.  To demonstrate this obligation, we apply the current values in the INITIALISATION clause to their corresponding variables in the INVARIANT clause.
+      For each operation in the machine, there must be a separate proof obligation.  Hence, there will be proof obligations for assignUserToRole and revokeUserAssignment operations.  However, we will discuss only the proof obligation for assignUserToRole operation.  This takes the following predicate: 
+
+I ∧ P ⇒ [S] I
+      Which means that under the assumption that invariant I is true and the preconditions P of the operation is true as well, then: the statement of the operation S (i.e. the operation’s body) must preserve the invariant I.

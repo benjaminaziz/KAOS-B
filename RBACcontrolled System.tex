@@ -1,0 +1,131 @@
+\documentclass[conference]{IEEEtran}
+
+
+
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+\usepackage{verbatim}
+
+\usepackage{multirow}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{ifpdf}
+\usepackage{url}
+\usepackage[bookmarks=false]{hyperref}
+\usepackage{hhline}
+\usepackage[printonlyused]{acronym}
+%\usepackage{appendix}
+\usepackage{breakurl}
+%\usepackage[style=super]{glossaries}
+\usepackage{longtable}
+\usepackage{enumerate}
+%\usepackage{tikz}
+%\usepackage{rotating}
+\usepackage{lineno}
+%\usepackage{graphics}
+\usepackage[table]{xcolor}
+\usepackage{threeparttable}
+
+\newcommand\BibTeX{{\rmfamily B\kern-.05em \textsc{i\kern-.025em b}\kern-.08em
+T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\graphicspath{{images/}}
+
+% Put remarks in the paper easily located by ``bigodot'' in margin
+% Usage: \todo{twf: we need a better example here.}
+\newcommand{\todo}[1]{%
+\mbox{}\marginpar[\hfill$\bigodot$]{$\bigodot$\hfill}
+{\bf \sc #1}}
+
+
+\input{Acronyms}
+
+\definecolor{lightblue}{rgb}{0.93,0.95,1.0}
+\definecolor{babyblueeyes}{rgb}{0.63, 0.79, 0.95}
+\begin{document}
+
+
+\title{Incremental Development of RBAC-controlled E-marking System Using the B Method}
+
+{\author{%\and
+%\IEEEauthorblockN{Lotfi ben Othmane}
+%\IEEEauthorblockA{
+%Secure Software Engineering Group\\
+%Fraunhofer SIT\\
+%Darmstadt, Germany\\
+%lotfi.ben.othmane@sit.fraunhofer.de}
+}
+
+\maketitle
+
+\begin{abstract}
+
+\input{abstract}
+
+\end{abstract}
+
+
+
+% general terms are not compulsory anymore, 
+% you may leave them out
+
+%\keywords
+%\Keyword: Software Security; agile software security; systematic review study
+ 
+\maketitle
+
+\section{Introduction}
+
+
+
+
+\input{introduction}
+
+
+
+\section{RBAC security policy}\label{sec:background}
+
+\input{background}
+
+\section{RBAC Models}\label{sec:models}
+
+\input{models}
+
+
+\section{The EMS system and it's entities}\label{sec:entities}
+
+\input{entities}
+
+\section{application of the RBAC to the EMS}\label{sec:application}
+
+\input{applications}
+
+\section{Modeling the RBAC policy using the B language}\label{sec:modeling}
+
+\input{modeling}
+
+\section{Formal verification}\label{sec:verification}
+
+\input{verification}
+
+\section{Conclusion}\label{sec:conclusion}
+
+\input{conclusion}
+
+%\section*{Acknowledgments}
+
+%This work was supported by the BMBF within EC SPRIDE, the Hessian LOEWE excellence initiative within CASED, and a Fraunhofer Attract grant. 
+
+%\bibliographystyle{abbrvnat}
+
+\bibliographystyle{IEEEtranS}
+\bibliography{RBACcontrolled System}
+
+
+\end{document}
+
