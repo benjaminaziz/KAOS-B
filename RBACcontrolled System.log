@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.7)  3 MAY 2015 21:04
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.7)  4 MAY 2015 12:35
 entering extended mode
 **RBACcontrolled*System.tex
 ("D:\Projects\KAOS-B\RBACcontrolled System.tex"
@@ -493,69 +493,65 @@ LaTeX Info: Redefining \ref on input line 50.
 LaTeX Info: Redefining \pageref on input line 50.
 LaTeX Info: Redefining \nameref on input line 50.
 
-(D:\Projects\KAOS-B\abstract.tex) (D:\Projects\KAOS-B\introduction.tex)
+(D:\Projects\KAOS-B\abstract.tex
+Package acronym Info: Label `acro:RBAC' newly defined as it shall be overridden
+
+although it is yet undefined on input line 1.
+Package acronym Info: Label `acro:EMS' newly defined as it shall be overridden
+although it is yet undefined on input line 1.
+) (D:\Projects\KAOS-B\introduction.tex
+Package acronym Info: Label `acro:RBAC' overridden on input line 1.
+Package acronym Info: Label `acro:EMS' overridden on input line 4.
+)
 (D:\Projects\KAOS-B\background.tex
+Underfull \vbox (badness 1728) has occurred while \output is active []
+
+
+<RBACpolicy.jpg, id=3, 963.6pt x 542.025pt>
+File: RBACpolicy.jpg Graphic file (type jpg)
+ <use RBACpolicy.jpg>
+Package pdftex.def Info: RBACpolicy.jpg used on input line 5.
+(pdftex.def)             Requested size: 385.43317pt x 216.80615pt.
+
+Overfull \hbox (133.43317pt too wide) in paragraph at lines 5--6
+ [][] 
+ []
+
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no ¢ in font ptmr7t!
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no ¢ in font ptmr7t!
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no ¢ in font ptmr7t!
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no ¢ in font ptmr7t!
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no ¢ in font ptmr7t!
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no ¢ in font ptmr7t!
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no ¢ in font ptmr7t!
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no ¢ in font ptmr7t!
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no ¢ in font ptmr7t!
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no ¢ in font ptmr7t!
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no ¢ in font ptmr7t!
-) (D:\Projects\KAOS-B\models.tex
+[1{C:/Users/lothmane/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+
+ <D:/Projects/KAOS-B/RBACpolicy.jpg>] <RBACElements.jpg, id=19, 963.6pt x 542.0
+25pt>
+File: RBACElements.jpg Graphic file (type jpg)
+
+<use RBACElements.jpg>
+Package pdftex.def Info: RBACElements.jpg used on input line 16.
+(pdftex.def)             Requested size: 385.43317pt x 216.80615pt.
+
+Overfull \hbox (133.43317pt too wide) in paragraph at lines 16--17
+ [][] 
+ []
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 27.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 27.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
+(D:\Projects\KAOS-B\models.tex
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ˜ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
- [1{C:/Users/lothmane/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
-
-
-]
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no ˆ in font ptmr7t!
-Missing character: There is no ˆ in font ptmr7t!
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no ˆ in font ptmr7t!
-Missing character: There is no ‰ in font ptmr7t!
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no ˆ in font ptmr7t!
-Missing character: There is no ˆ in font ptmr7t!
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no ˆ in font ptmr7t!
-Missing character: There is no ‰ in font ptmr7t!
-)
-(D:\Projects\KAOS-B\entities.tex
+) (D:\Projects\KAOS-B\entities.tex
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
@@ -616,6 +612,7 @@ Missing character: There is no ™ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ¢ in font ptmr7t!
+ [2 <D:/Projects/KAOS-B/RBACElements.jpg>]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
@@ -626,22 +623,10 @@ Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
 ) (D:\Projects\KAOS-B\applications.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [2]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
-LaTeX Font Info:    Try loading font information for U+msa on input line 6.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 6.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
 Overfull \hbox (104.84453pt too wide) in paragraph at lines 6--7
 []$\OML/cmm/m/it/10 ROLES \OT1/cmr/m/n/10 = []$ 
  []
@@ -658,10 +643,11 @@ Missing character: There is no ™ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
+[3]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no † in font ptmr7t!
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 30.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
@@ -723,7 +709,6 @@ Missing character: There is no § in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no ˆ in font ptmr7t!
 Missing character: There is no © in font ptmr7t!
- [3]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no ˆ in font ptmr7t!
 Missing character: There is no ˆ in font ptmr7t!
@@ -859,6 +844,7 @@ Underfull \hbox (badness 6658) in paragraph at lines 55--57
 []\OT1/ptm/m/n/10 (headmaster). (head-mas-ter  sod1  card(hasTheRole-
  []
 
+[4]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no ˆ in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
@@ -917,7 +903,6 @@ Missing character: There is no ¢ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ¢ in font ptmr7t!
- [4]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no ‡ in font ptmr7t!
 Missing character: There is no ’ in font ptmr7t!
@@ -931,7 +916,18 @@ Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
 ) (D:\Projects\KAOS-B\conclusion.tex)
-No file RBACcontrolled*System.bbl.
+("D:\Projects\KAOS-B\RBACcontrolled System.bbl"
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24 \end{thebibliography}
+                          
+? 
+)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -943,24 +939,22 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 130.
-[5
-
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 130.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 142.
+[5]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 142.
  ("D:\Projects\KAOS-B\RBACcontrolled System.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 130.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 130.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 130.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 142.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 142.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 142.
  ) 
 Here is how much of TeX's memory you used:
- 8289 strings out of 493921
- 121365 string characters out of 3144868
- 230543 words of memory out of 3000000
- 11424 multiletter control sequences out of 15000+200000
- 33628 words of font info for 69 fonts, out of 3000000 for 9000
+ 8232 strings out of 493921
+ 121442 string characters out of 3144868
+ 224339 words of memory out of 3000000
+ 11346 multiletter control sequences out of 15000+200000
+ 40610 words of font info for 85 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 34i,6n,35p,873b,408s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,14n,35p,873b,413s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program 
 Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Fil
@@ -970,9 +964,9 @@ es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files
 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
 type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/t
 imes/utmri8a.pfb>
-Output written on "RBACcontrolled System.pdf" (5 pages, 114710 bytes).
+Output written on "RBACcontrolled System.pdf" (5 pages, 205912 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
- 25 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 93 PDF objects out of 1000 (max. 8388607)
+ 31 named destinations out of 1000 (max. 500000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
