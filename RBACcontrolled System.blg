@@ -1,0 +1,18 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: RBACcontrolled System.aux
+The style file: IEEEtranS.bst
+Database file #1: RBACcontrolledSystem.bib
+-- IEEEtranS.bst version 1.13 (2008/09/30) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+** Sorting version - not for normal IEEE work.
+Name 1 in "Ferraiolo, D. F., and Kuhn, D. R." has a comma at the end for entry FeKu2009
+while executing---line 2597 of file IEEEtranS.bst
+Name 1 in "Ahn, G. J., and Hu, H." has a comma at the end for entry AhHu2007
+while executing---line 2597 of file IEEEtranS.bst
+Name 1 in "Ahn, G. J., and Hu, H." has a comma at the end for entry AhHu2007
+while executing---line 2609 of file IEEEtranS.bst
+Name 1 in "Ferraiolo, D. F., and Kuhn, D. R." has a comma at the end for entry FeKu2009
+while executing---line 2609 of file IEEEtranS.bst
+
+Done.
+(There were 4 error messages)

@@ -117,7 +117,7 @@
   Timestamp                = {2015.05.03}
 }
 
-@Book{,
+@Book{Bou2012,
   Title                    = {Industrial Use of Formal Methods: Formal Verification},
   Author                   = {Boulanger, J.},
   Editor                   = {ISTE; Hoboken},
@@ -131,7 +131,7 @@
 
 @InProceedings{DBS2004,
   Title                    = {A ?rst step towards formal verfication of security policy properties for RBAC},
-  Author                   = {Drouineaud , M., Bortin, M., Torrini, P.,  Sohr , K.},
+  Author                   = {Drouineaud , M., Bortin, M., Torrini, P., Sohr , K.},
   Booktitle                = {Proc. of the Fourth International Conference on Quality Software},
   Year                     = {2004},
   Series                   = {QSIC’04},
@@ -140,9 +140,9 @@
   Timestamp                = {2015.05.03}
 }
 
-@Electronic{,
+@Electronic{FeKu2009,
   Title                    = {Role-based access controls},
-  Author                   = {Ferraiolo, D. F., \& Kuhn, D. R.},
+  Author                   = {Ferraiolo, D. F., and Kuhn, D. R.},
   HowPublished             = {http://arxiv.org/ftp/arxiv/papers/0903/0903.2171.pdf},
   Note                     = {arXiv preprint arXiv:0903.2171.},
   Url                      = {http://arxiv.org/ftp/arxiv/papers/0903/0903.2171.pdf},

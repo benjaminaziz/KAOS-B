@@ -5,60 +5,118 @@ The B method is one of the abstract formal languages that uses a special languag
 
 To formalize the basic RBAC elements, it is essential to define the sets of USER and ROLES as well as UA and PA assignments.  In the EMS system, USER set contains subsets of students, guardians and staff.  The latter itself contains subsets of teachers and headmasters.  Therefore, these subsets must be declared as variables in the AMN: 
 
+\begin{align*}
 staff, students, studentGuarian, teachers, manager
+\end{align*}
+
 
 Now, we can declare, within INVARIANT clause, that each of those variables is a subset of USER set, and some are also subsets of staff subset, provided that no element of each subset can be found into two different subsets.  For example, if a student has been registered into students subset, then that student cannot be found as a member of staff subset (i.e. students ∩ staff = { }).  This can be expressed using the B specification as follows:
 
-students ⊆ USER  ∧
-staff ⊆ USER  ∧
-students ∩ staff = { }  ∧
-studentGuardian ⊆ USER   ∧
-studentGuardian ∩ students = { }   ∧
-studentGuardian ∩ staff = { }   ∧
-manager ⊆ staff   ∧
-teachers ⊆ staff   ∧
-manager ∩ teachers = { }
+
+\begin{align*}
+students \subseteq USER  \wedge \\
+staff \subseteq USER  \wedge \\
+students \cap staff = \{ \}  \wedge \\
+studentGuardian \subseteq USER   \wedge \\
+studentGuardian\cap students = \{ \}  \wedge \\
+studentGuardian \cap staff = \{ \}   \wedge \\
+manager \subseteq staff   \wedge \\
+teachers \subseteq staff   \wedge \\
+manager \cap teachers = \{ \} \\ 
+\end{align*}
+
+
 
 To model the User Assignment (UA), which assigns each user to a particular role, we need to define a relation between USER set and ROLES set.  This relation is, in fact, a set of elements, where each element is a pair of user and role.  For example, if a user u has been assigned to a role r, then there is an element for the relation can be defined as: {(u, r}}.
 
 Since elements of the relation between USER and ROLES are subject to change (i.e. assigning new users to roles, or revoking existing assignments), we represent this relation as a variable, and we give it the name: hasTheRole.  The declaration of that within the INVARIANT clause would be as: 
 
-hasTheRole ∈ USER ↔ ROLES
+\begin{align*}
+hasTheRole \in USER \leftrightarrow ROLES
+\end{align*}
+
 
 To model the Permissions Assignments (PA), we do not need to define a new set for permissions, or a direct relation (as in the UA assignment) between ROLES and those permissions.  Since any permission is actually a pair of operation and object, we will be specifying (within preconditions of each operation (function)) in the system, that this operation is only performed by users who have been given a particular role.
 
 For example, users who can add a submission are only students.  Therefore, we say, as a precondition of the operation, that “who has the role of ‘student’, can perform this operation”.  This is expressed by the B specification as in Figure 8:
+
+\begin{algorithm}                      % enter the algorithm environment
+\caption{Assigning "add a submission" permission to "student" role}          % give the algorithm a caption
+\label{alg1}                          
+%\begin{algorithmic}  
+
+
+PRE \\
+
+\quad ${\bf hasTheRole[\{s\}] = \{student\}} \wedge$\\
+ 
+\quad $report \in SUBMISSION \wedge$ \\
+
+\quad $report \notin reports \wedge$ \\
+
+\quad $u \in studies [\{s\}] \wedge$ \\
+
+\quad $card(submit[\{s\}] \cap reportFor[\{u\}]$ \\
+
+\quad $< maxSubmissions$
+ 
+
+
+THEN \\ 
+
+\quad $report \gets reports \cup \{report\} \mid\mid \\$
+
+\quad $submits \gets submits \cup \{s \mapsto report\} \mid\mid \\$
+
+\quad $reportFor \gets reportFpr \cup \{report \mapsto u\}$
+ 
+
+END
+%\end{algorithmic} 
+\end{algorithm} 
 
 
 \subsection{Modeling the RBAC Constraints}
 
      We begin with mutual exclusiveness of roles  (Separation of Duties).  As has been mentioned earlier, there are two conflicted sets of roles in the EMS system.  Since roles are previously known and defined for the system, the two conflicted sets of roles should be initialized within the INITIALIZATION clause as:
 
-$sod1 = {teacher, headteacher, headmaster}$,
-$sod2 = {student, student_guardian}$
+\begin{align*}
+sod1 &= \{teacher, headteacher, headmaster\}, \\
+sod2 &= \{student, student_guardian\}
+\end{align*}
 
-     Each of sod1 and sod2 is a subset of ROLES set, and the intersection between them is equal to an empty set.  Therefore, this must be declared within INVARIANT clause:
-sod1 ⊆ ROLES  ∧
-sod2 ⊆ ROLES  ∧
-sod1 ∩ sod2 = { }
-     Now, we can formulate the condition of Separation of Duties (SoD) using the B specification, as follows:
+Each of sod1 and sod2 is a subset of ROLES set, and the intersection between them is equal to an empty set.  Therefore, this must be declared within INVARIANT clause:
+\begin{flalign*}
+sod1 \subseteq ROLES   \wedge \\
+sod2 \subseteq ROLES   \wedge \\
+sod1 \cap sod2 = \{ \}
+\end{flalign*}
 
-∀(u, role1, role2). (u ∈ USER  ∧  role1 ∈ sod1  ∧  role2 ∈ sod2  ∧  
-        role1  ∈   hasTheRole[{u}]         ⇒  not (role2 ∈ hasTheRole[{u}] )  ∧
+Now, we can formulate the condition of Separation of Duties (SoD) using the B specification, as follows:
+\begin{align*}
+\forall(u, role_1, role_2) . (u \in USER  \wedge role_1 \in sod_1 \\ \wedge role_2  \in sod_2  \wedge role_1  \in   hasTheRole[\{u\}]  \\       \Rightarrow \neg (role_2 \in hasTheRole[\{u\}] )   \\
+\wedge
+\end{align*}
 
-  ∀(u, role1, role2). (u ∈ USER  ∧  role1 ∈ sod1  ∧  role2 ∈ sod2  ∧  
-        role2 ∈   hasTheRole[{u}]       ⇒  not (role1 ∈ hasTheRole[{u}] )  
+\begin{align*}
+\forall(u, role1, role2) . (u \in USER \wedge role1  \in sod1 
+\\ \wedge role2  \in sod2 \wedge role2 \in   hasTheRole[\{u\}]    \\ \Rightarrow \neg (role1 \in hasTheRole[\{u\}] )  \\
+\end{align*}
 
      The above two predicates mean, respectively, that for every user u and two given roles role1 and role2, where u ∈ USER and role1 ∈ sod1 and role2 ∈ sod2 and that role1 belongs to the set of roles given to the user u, then the role2 must not belong to the roles of the user u.  Likewise, for every user u and two given roles role1 and role2, where u ∈ USER and role1 ∈ sod1 and role2 ∈ sod2 and that role2  belongs to the set of roles given to the user u, then the role1 must not belong to the roles of the user u
      The second type of constraints is cardinality constraints.  In the EMS system, the number of users who will be assigned to headmaster role must not be greater than 1.  Hence, the cardinality of users who have the role headmaster must be less than or equal to 1.  This is expressed as: 
 
-∀(headmaster). (headmaster ∈ sod1  ⇒ 
-                            card(hasTheRole-1[{headmaster}]  ≤ 1 )  
+\begin{align*}
+\forall (headmaster). (headmaster \in sod1  \Rightarrow \\
+                            card(hasTheRole^1[\{headmaster\}]  \leq 1 )  
+\end{align*}
+
 
 \subsection{Modeling the Role Hierarchy (RH)}
      Head teachers have their own permissions, such as reviewing records.  However, they still teachers, and, therefore, can perform operations that are given to teachers.  We need to formulate a predicate that satisfies the concept of inheritance, where head teachers can inherit permissions from teacher role.  In the B specification, this is expressed as:
 
-∀(u, headteacher). (headteacher  ∈ sod1  ∧  u ↦ headteacher   ∈ hasTheRole
-⇒  headteacher  ∈ hasTheRole[{u}]   ∧  teacher  ∈ hasTheRole[{u}] )
-
+\begin{align*}
+\forall (u, headteacher) . (headteacher  \in sod1  \wedge  \\ u \mapsto headteacher \in hasTheRole
+\\ \Rightarrow headteacher  \in hasTheRole[\{u\}]  \\ \wedge  teacher  \in hasTheRole[\{u\}] )
+\end{align*}
     Which means that for every user u and headteacher role, where headteacher ∈ sod1 and that user has been assigned to the role headteacher, then the user u would become have the role teacher in addition to the role headteacher.
