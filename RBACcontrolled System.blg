@@ -1,18 +1,57 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: RBACcontrolled System.aux
+This is BibTeX, Version 0.99d (TeX Live 2014)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: RBACcontrolled System.aux
 The style file: IEEEtranS.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: RBACcontrolledSystem.bib
 -- IEEEtranS.bst version 1.13 (2008/09/30) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 ** Sorting version - not for normal IEEE work.
-Name 1 in "Ferraiolo, D. F., and Kuhn, D. R." has a comma at the end for entry FeKu2009
-while executing---line 2597 of file IEEEtranS.bst
-Name 1 in "Ahn, G. J., and Hu, H." has a comma at the end for entry AhHu2007
-while executing---line 2597 of file IEEEtranS.bst
-Name 1 in "Ahn, G. J., and Hu, H." has a comma at the end for entry AhHu2007
-while executing---line 2609 of file IEEEtranS.bst
-Name 1 in "Ferraiolo, D. F., and Kuhn, D. R." has a comma at the end for entry FeKu2009
-while executing---line 2609 of file IEEEtranS.bst
 
 Done.
-(There were 4 error messages)
+You've used 11 entries,
+            4498 wiz_defined-function locations,
+            971 strings with 9957 characters,
+and the built_in function-call counts, 8943 in all, are:
+= -- 789
+> -- 235
+< -- 52
++ -- 122
+- -- 56
+* -- 447
+:= -- 1397
+add.period$ -- 25
+call.type$ -- 11
+change.case$ -- 62
+chr.to.int$ -- 129
+cite$ -- 11
+duplicate$ -- 567
+empty$ -- 696
+format.name$ -- 65
+if$ -- 1999
+int.to.chr$ -- 0
+int.to.str$ -- 11
+missing$ -- 100
+newline$ -- 58
+num.names$ -- 26
+pop$ -- 267
+preamble$ -- 1
+purify$ -- 48
+quote$ -- 2
+skip$ -- 663
+stack$ -- 0
+substring$ -- 368
+swap$ -- 430
+text.length$ -- 9
+text.prefix$ -- 0
+top$ -- 6
+type$ -- 108
+warning$ -- 0
+while$ -- 43
+width$ -- 13
+write$ -- 127

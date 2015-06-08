@@ -1,10 +1,10 @@
 Perhaps the most important aspect in using formal methods in software development is that specifications can be analyzed and verified using mathematical techniques and tools.  There are two approaches for formal verification: model checking and theorem proving (e.g. proof obligations).
 
-\subsection{Model Checking (the proB tool)}
+\subsection{Model Checking (the ProB tool)}
  
-Model checking is an automated approach that used to verify correctness and consistency of a model.  The proB tool is one of the B machines-supported tools that test automatically the consistency of the B specification.  The main idea of model checking is that all machine’s nodes (states) are visited to examine whether there exist any potential bugs~\cite{MMFA2012}.
+Model checking is an automated approach that used to verify correctness and consistency of a model.  The ProB tool is one of the B machines-supported tools that test automatically the consistency of the B specification.  The main idea of model checking is that all machine nodes (states) are visited to examine whether there exist any potential bugs~\cite{MMFA2012}.
 
-The proB tool showed that our RBAC specification is correct regarding the system states (nodes).  There was no violation with the system properties and invariant when it comes to the performance of operations.
+The ProB tool showed that our RBAC specification is correct regarding the system states (nodes).  There was no violation with the system properties and invariant when it comes to the performance of operations.
 
 \subsection{Theorem Proving (Proof Obligations)}
 The main purpose of theorem proving is to construct a mathematical proof for a mathematical statement to be true~\cite{Bou2012}.  Since formal proofs do not use natural languages, they are expressed in a symbolic language, usually called a proof language. 
@@ -17,7 +17,7 @@ Since our RBAC model doesn’t have properties clause, proof obligations would b
 Prp \Rightarrow  \exists \quad v. \quad I
 \end{align*}
 
-      Which means that under the assumption that Prp (PROPERTIES clause, if found) is true, then: the invariant I is satisfied by at least one of the machine’s variables v
+      Which means that under the assumption that Prp (PROPERTIES clause, if found) is true, then: the invariant I is satisfied by at least one of the machine variables v
      To discharge this obligation, we need to show that there exist values for:
 \begin{itemize}
 \item \emph{sod1} and \emph{sod2}, which are subsets of \emph{ROLES}; where the intersection between them is an empty set.
@@ -57,4 +57,4 @@ I \wedge P \Rightarrow [S] I
 
 
 
-Which means that under the assumption that invariant I is true and the preconditions P of the operation is true as well, then: the statement of the operation S (i.e. the operation’s body) must preserve the invariant I.
+Which means that under the assumption that invariant I is true and the preconditions P of the operation is true as well, then: the statement of the operation S (i.e. the operation�s body) must preserve the invariant I.
