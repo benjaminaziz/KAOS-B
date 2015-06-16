@@ -8,6 +8,7 @@ The Electronic Marking System (EMS) allows students, teachers, headmasters and g
 \end{figure}
 
 Generally, the EMS system can be accessed by different users: the system admin (who controls and manages the different entities and resources of the system), students, teachers, headmasters and guardians.  Hence, users can be classified into three main entities (tables): staff, students, and guardians, where staff entity represents teachers and headmasters as well as the system admin.
+The other entities of the system would be as follows:
 
 \begin{table*}[bth]
 \centering
@@ -30,9 +31,10 @@ ROLES& this entity is set up for the purpose of applying RBAC model.  Hence, it 
 
 
 There are also relationships between those entities, which can be briefly stated as:
+
 \begin{table*}[bth]
 \centering
-\caption{Entities of the EMS System.}
+\caption{Relations between EMS System entities.}
 \small
 \rowcolors{0}{}{lightblue}
 \begin{tabular}{p{0.9 in} p{5.9 in}} \hline 
@@ -49,26 +51,22 @@ submits &   a relation between a student and a submission; where any student can
 
 reportFor &  a relation between a submitted report and a unit.  Therefore, all submitted reports are for particular units, and each unit may have more than one report. \\
 
-submissionMark &  a relation between a submitted report and a mark (which is a natural number).  However, cannot find any report mapped into two different marks (axiomatically!), but we can find that a given mark represents the grade of more than one report.\\
+submissionMark &  a relation between a submitted report and a mark (which is a natural number).  However, it is not possible for a report to be mapped into two different marks (axiomatic!), but we can find that a given mark represents the grade of more than one report.\\
 
 InClassMark &  a relation between a unit and a mark (i.e. natural number) to specify a student’s mark for his/her participations and activities inside the class during the year. \\
 
 examMark &  a relation between a unit and a mark to specify the student’s mark/s (depending on how many exams for that unit).\\ 
 
-studentReport &  a relation between a student and a final report; where each student must have a final report for each unit, which shows his/her final mark.  However, cannot find two final reports are related to the same student.\\
+studentReport &  a relation between a student and a final report; where each student must have a final report for each unit, which shows his/her final mark.  However, it is not reasonable to assign two final reports to the same student.\\
 
-hasTheRole & maps a user (i.e. a student, a teacher, etc.) into a set of roles (e.g. student, teacher, headmaster, student guardian); where each user would be linked to only one role (unless there were some circumstances made otherwise, e.g. in case of absence of the school manager, any teacher can be assigned to play the role of headmaster; and this assignment falls under the responsibility of the system’s admin).
+hasTheRole & maps a user into a set of roles (e.g. student, teacher, headmaster or student guardian); where each user would be linked to only one role (unless there were some circumstances made otherwise, e.g. in case of absence of the school manager, any teacher can be assigned to play the role of headmaster; and this assignment falls under the responsibility of the system’s admin).
 
 \\ \hline\hline
 \end{tabular}
 \label{tab:namehere}
 \end{table*}
 
-Therefore, the final mark of each student for a particular unit is being calculated as follows:
 
-\begin{align*}
-Final mark = total of submissions marks + \\ total of exams’ marks + in\-class mark
-\end{align*}
 
 
 
