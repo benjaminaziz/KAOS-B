@@ -1,0 +1,57 @@
+By looking at the work mechanism of RBAC models, we may find that strength of RBAC policies lies in the fact that users are not directly connected to the implementation of operations. Rather, there should be some roles to be previously linked to specific permissions, and users are being assigned to those roles according to requirements of a system. 
+
+The work on applying the concept of UA and PA is the critical point for ensuring that users are performing correctly the operations allocated for them.  User assignments and permission assignments can be defined as links between three different sets (i.e. users, roles and permissions).  In our specification, UA has been clearly declared as:
+          
+
+\begin{align*}
+hasTheRole \in USER \leftrightarrow ROLES
+\end{align*}
+
+
+However, there were no declaration for PA, where roles need to be mapped into permissions.  Instead, we adopted the strategy of restricting the performance of operations by certain users, through stating some checking predicates within the preconditions of each operation in the system.  This is precisely what is mostly applied in some programming languages for development of web applications (e.g. Java). When roles of the system are defined (usually via a realm), the link between those roles and permissions is done within the structure of the functionality itself.  
+
+For instance, in the EMS system, the only users who can add a submission mark are teachers (who are assigned to the role $teacher$).  Hence, we make the link between this role and the function of adding a submission mark through the following statement (as a precondition): 
+
+
+\begin{align*}
+hasTheRole[\{t\}] = \{teacher\} 
+\end{align*}
+
+
+
+This predicate means that if the user $t$ has the role of $teacher$, then he will be able (if also satisfying the other preconditions- see algorithm 2) to perform the operation.  The following algorithm shows the B code for the operation of adding a submission mark.
+
+ \begin{algorithm}                      % enter the algorithm environment
+ 	\caption{Assigning "add a submission mark" permission to "teacher" role}          % give the algorithm a caption
+ 	\label{alg1}                          
+ 	%\begin{algorithmic}  
+ 	
+ 	
+ 	PRE \\
+ 	
+ 	\quad ${\bf hasTheRole[\{s\}] = \{student\}} \wedge$\\
+ 	
+ 	\quad $report \in SUBMISSION \wedge$ \\
+ 	
+ 	\quad $report \notin reports \wedge$ \\
+ 	
+ 	\quad $u \in studies [\{s\}] \wedge$ \\
+ 	
+ 	\quad $card(submit[\{s\}] \cap reportFor[\{u\}]$ \\
+ 	
+ 	\quad $< maxSubmissions$
+ 	
+ 	
+ 	
+ 	THEN \\ 
+ 	
+ 	\quad $report \gets reports \cup \{report\} \mid\mid \\$
+ 	
+ 	\quad $submits \gets submits \cup \{s \mapsto report\} \mid\mid \\$
+ 	
+ 	\quad $reportFor \gets reportFpr \cup \{report \mapsto u\}$
+ 	
+ 	
+ 	END
+ 	%\end{algorithmic} 
+ \end{algorithm} 
