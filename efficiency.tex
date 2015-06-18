@@ -19,38 +19,36 @@ hasTheRole[\{t\}] = \{teacher\}
 
 
 
-This predicate means that if the user $t$ has the role of $teacher$, then he will be able (if also satisfying the other preconditions- see algorithm 2) to perform the operation.  The following algorithm shows the B code for the operation of adding a submission mark.
+This predicate means that if the user $t$ has the role of $teacher$, then he will be able (if also satisfying the other preconditions- see Algorithm 2) to perform the operation.  The following algorithm shows the B code for the operation of adding a submission mark.
 
  \begin{algorithm}                      % enter the algorithm environment
- 	\caption{Assigning "add a submission mark" permission to "teacher" role}          % give the algorithm a caption
- 	\label{alg1}                          
- 	%\begin{algorithmic}  
- 	
+ 	\caption{Assigning "add a submission mark" permission to "teacher" role}         % give the algorithm a caption
+ 	\label{alg2}                        
+ 	%\begin{algorithmic} 
+ 	\vspace{0.5cm} 
+ 	$addSubmissionMark(t, m, report, s, u) \triangleq$
  	
  	PRE \\
  	
- 	\quad ${\bf hasTheRole[\{s\}] = \{student\}} \wedge$\\
+ 	\quad ${\bf hasTheRole[\{t\}] = \{teacher\}} \wedge$\\
  	
- 	\quad $report \in SUBMISSION \wedge$ \\
+ 	\quad $m \in \mathbb{N} \wedge$ \\
  	
- 	\quad $report \notin reports \wedge$ \\
+ 	\quad $report \in submits [\{s\}] \wedge$ \\
  	
- 	\quad $u \in studies [\{s\}] \wedge$ \\
+ 	\quad $u \in studies [\{s\}]\wedge$ \\
  	
- 	\quad $card(submit[\{s\}] \cap reportFor[\{u\}]$ \\
+ 	\quad $t \in taughtBy [\{u\}] \wedge$ \\
  	
- 	\quad $< maxSubmissions$
- 	
- 	
+ \quad $u \in reportFor [\{report\}]\wedge$ \\
+ 
+ \quad $report \mapsto m \notin submissionMark $ \\
  	
  	THEN \\ 
  	
- 	\quad $report \gets reports \cup \{report\} \mid\mid \\$
+ 	\quad $ submissionMark(report):= m \\$
  	
- 	\quad $submits \gets submits \cup \{s \mapsto report\} \mid\mid \\$
- 	
- 	\quad $reportFor \gets reportFpr \cup \{report \mapsto u\}$
- 	
+
  	
  	END
  	%\end{algorithmic} 
