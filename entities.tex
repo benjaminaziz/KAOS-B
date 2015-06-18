@@ -1,4 +1,4 @@
-The Electronic Marking System (EMS) allows students, teachers, headmasters and guardians to access students’ marks of their units.  Each user is able to benefit from the system according to the powers/authorizations given to him/her.  For example, students can electronically submit papers (reports) for a particular unit to be marked by the unit’s teacher.  Teachers, on the other hand, have the right to establish, edit and delete marks of their students.  In addition, headmasters and guardians can also access the system for the purpose of viewing marks and signing final reports.  
+The Electronic Marking System (EMS) allows students, teachers, headmasters and guardians to access students’ marks of their units.  Each user is able to benefit from the system according to the powers/authorizations given to him/her.  For example, students can electronically submit papers (reports) for a particular unit to be marked by the unit's teacher.  Teachers, on the other hand, have the right to establish, edit and delete marks of their students.  In addition, headmasters and guardians can also access the system for the purpose of viewing marks and signing final reports.  
 
 \begin{figure}[bht]
 \centering
@@ -8,7 +8,7 @@ The Electronic Marking System (EMS) allows students, teachers, headmasters and g
 \end{figure}
 
 Generally, the EMS system can be accessed by different users: the system admin (who controls and manages the different entities and resources of the system), students, teachers, headmasters and guardians.  Hence, users can be classified into three main entities (tables): staff, students, and guardians, where staff entity represents teachers and headmasters as well as the system admin.
-The other entities of the system would be as follows:
+The other entities of the system as well as the relationships between those are briefly demonstrated in Table\ref{tab:otherentities} and Table\ref{tab:relations},respectively, in the following page.
 
 \begin{table*}[bth]
 \centering
@@ -25,16 +25,15 @@ FINAL\_REPORT& which contains final reports for all students. \\
 MARK& its contents are natural numbers, which represent students’ marks. \\ 
 ROLES& this entity is set up for the purpose of applying RBAC model.  Hence, it represents the different roles in the EMS system (i.e. admin, teacher, student, etc.).\\ \hline\hline
 \end{tabular}
-\label{tab:namehere}
+\label{tab:otherentities}
 \end{table*}
 
 
 
-There are also relationships between those entities, which can be briefly stated as:
 
 \begin{table*}[bth]
 \centering
-\caption{Relations between EMS System entities.}
+\caption{Relations between the EMS entities.}
 \small
 \rowcolors{0}{}{lightblue}
 \begin{tabular}{p{0.9 in} p{5.9 in}} \hline 
@@ -63,7 +62,7 @@ hasTheRole & maps a user into a set of roles (e.g. student, teacher, headmaster 
 
 \\ \hline\hline
 \end{tabular}
-\label{tab:namehere}
+\label{tab:relations}
 \end{table*}
 
 
