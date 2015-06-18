@@ -26,7 +26,7 @@ manager \cap teachers = \{ \} \\
 
 
 
-To model the User Assignment (UA), which assigns each user to a particular role, we need to define a relation between USER set and ROLES set.  This relation is, in fact, a set of elements, where each element is a pair of $user$ and $role$.  For example, if a user $u$ has been assigned to a role $r$, then there is an element for the relation can be defined as: $\{(u, r)\}$.
+To model User Assignment (UA), which assigns each user to a particular role, we need to define a relation between USER set and ROLES set.  This relation is, in fact, a set of elements, where each element is a pair of $user$ and $role$.  For example, if a user $u$ has been assigned to a role $r$, then there is an element for the relation can be defined as: $\{(u, r)\}$.
 
 Since elements of the relation between USER and ROLES are subject to change (i.e. assigning new users to roles, or revoking existing assignments), we represent this relation as a variable, and we give it the name: $hasTheRole$.  The declaration of that within the INVARIANT clause would be as: 
 
@@ -35,9 +35,9 @@ hasTheRole \in USER \leftrightarrow ROLES
 \end{align*}
 
 
-To model the Permissions Assignments (PA), we do not need to define a new set for permissions, or a direct relation (as in the UA assignment) between ROLES and those permissions.  Since any permission is actually a pair of operation and object, we will be specifying (within preconditions of each operation (function)) in the system, that this operation is only performed by users who have been given a particular role.
+To model Permissions Assignments (PA), we do not need to define a new set for permissions, or a direct relation (as in the UA assignment) between ROLES and those permissions.  Since any permission is actually a pair of operation and object, we will be specifying (within preconditions of each operation (function)) in the system, that this operation is only performed by users who have been given a particular role.
 
-For example, users who can add a submission are only students.  Therefore, we say, as a precondition of the operation, that \textit{“who has the role of ‘student’, can perform this operation”}.  This is expressed by the B specification as in the following algorithm:
+For example, users who can add a submission are only students.  Therefore, we say, as a precondition of the operation, that \textit{“who has the role of ‘student’, can perform this operation”}.  Algorithm \ref{alg1} shows the B specification of the operation of adding a submission.
 
 \begin{algorithm}                      % enter the algorithm environment
 \caption{Assigning "add a submission" permission to "student" role}          % give the algorithm a caption
@@ -105,7 +105,7 @@ Now, we can formulate the condition of Separation of Duties (SoD) using the B sp
 
 The above two predicates mean, respectively, that for every user \textit{u} and two given roles \textit {role1} and \textit{role2}, where $ u \in USER $ and $ role1 \in sod1 $ and $ role2 \in sod2  $ and that \textit{role1} belongs to the set of roles given to the user \textit{u}, then the \textit{role2} must not belong to the roles of the user \textit{u}.  Likewise, for every user \textit{u} and two given roles \textit{role1} and \textit{role2}, where $ u \in USER $ and $ role1 \in sod1 $ and $ role2 \in sod2  $  and that \textit{role2}  belongs to the set of roles given to the user \textit{u}, then the \textit{role1} must not belong to the roles of the user \textit{u}.
 
-The second type of restrictions is that which is called  “Cardinality Constraints’.  In the EMS system, the number of users who will be assigned to $headmaster$ role must not be greater than 1.  Hence, the cardinality of users who have the role $headmaster$ must be less than or equal to 1.  This is expressed as: 
+The second type of restrictions is that what is called  “Cardinality Constraints’.  In the EMS system, the number of users who will be assigned to $headmaster$ role must not be greater than 1.  Hence, the cardinality of users who have the role $headmaster$ must be less than or equal to 1.  This is expressed as: 
 
 \begin{align*}
 \forall (headmaster). (headmaster \in sod1  \Rightarrow \\
