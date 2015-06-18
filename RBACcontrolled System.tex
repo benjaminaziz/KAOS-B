@@ -6,7 +6,7 @@
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{graphicx}
-
+%\usepackage{lipsum}
 \usepackage{verbatim}
 
 \usepackage{multirow}
@@ -55,17 +55,20 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
 
 
+
 \title{Incremental Development of RBAC-controlled E-marking System Using the B Method}
 
 {\author{\IEEEauthorblockN{Nasser Al-Hadhrami
 \IEEEauthorblockA{School of Computing\\
 University of Portsmouth,
-UK\\}}
+UK\\
+}}
 \and
 \IEEEauthorblockN{Benjamin Aziz
 \IEEEauthorblockA{School of Computing\\
 University of Portsmouth,
-UK\\}
+UK\\
+}
 \and
 \IEEEauthorblockN{Shantanu Sardesai}
 \IEEEauthorblockN{Technical University of \\ 
@@ -86,7 +89,9 @@ Germany\\}
 
 \end{abstract}
 
-
+\begin{IEEEkeywords}
+Role Based Access Control (RBAC), formal specifications, RBAC constraints, separation of duties, role hierarchy, cardinality constraints, model checking, proof obligations.
+\end{IEEEkeywords}
 \acresetall
 
 % general terms are not compulsory anymore, 
@@ -100,7 +105,7 @@ Germany\\}
 
 
 
-\section{Introduction}
+\section{Introduction} 
 
 \input{introduction}
 
@@ -109,36 +114,36 @@ Germany\\}
 \input{b}
 
 
-\section{RBAC security policy}\label{sec:background}
+\section{RBAC Security Policy}\label{sec:background} 
 
 \input{background}
 
-\section{RBAC Models}\label{sec:models}
+\section{RBAC Models}\label{sec:models} 
 
 \input{models}
 
 
-\section{The EMS system and it's entities}\label{sec:entities}
+\section{The EMS System and it's Entities}\label{sec:entities} 
 
 \input{entities}
 
-\section{application of the RBAC to the EMS}\label{sec:application}
+\section{Application of the RBAC to the EMS}\label{sec:application} 
 
 \input{applications}
 
-\section{Modeling the RBAC policy using the B language}\label{sec:modeling}
+\section{Modeling the RBAC Policy Using the B Language}\label{sec:modeling} 
 
 \input{modeling}
 
-\section{The Efficiency of the proposed solution}
+\section{The Efficiency of the Proposed Solution} 
 
 \input{efficiency}
 
-\section{Formal verification}\label{sec:verification}
+\section{Formal Verification}\label{sec:verification} 
 
 \input{verification}
 
-\section{Conclusion}\label{sec:conclusion}
+\section{Conclusion}\label{sec:conclusion} 
 
 \input{conclusion}
 
