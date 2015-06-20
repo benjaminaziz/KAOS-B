@@ -10,7 +10,7 @@ staff, students, studentGuarian, teachers, manager
 \end{align*}
 
 
-Now, we can declare, within INVARIANT clause, that each of those variables is a subset of $USER$ set, and some are also subsets of $staff$ subset, provided that no element of each subset can be found into two different subsets.  For example, if a student has been registered into $students$ subset, then that student cannot be found as a member of $staff subset$ (i.e. $ students \cap staff = \{\}$).  This can be expressed using the B specification as follows:
+Now, we can declare, within INVARIANT clause, that each of those variables is a subset of $USER$ set, and some are also subsets of $staff$ subset, provided that no element of each subset can be found into two different subsets.  For example, if a student has been registered into $students$ subset, then that student cannot be found as a member of $staff$ subset (i.e. $ students \cap staff = \{\}$).  This can be expressed using the B specification as follows:
 
 
 \begin{align*}
@@ -35,7 +35,7 @@ hasTheRole \in USER \leftrightarrow ROLES
 \end{align*}
 
 
-To model Permissions Assignments (PA), we do not need to define a new set for permissions, or a direct relation (as in the UA assignment) between ROLES and those permissions.  Since any permission is actually a pair of operation and object, we will be specifying (within preconditions of each operation (function)) in the system, that this operation is only performed by users who have been given a particular role.
+To model Permission Assignment (PA), we do not need to define a new set for permissions, or a direct relation (as in the UA assignment) between ROLES and those permissions.  Since any permission is actually a pair of operation and object, we will be specifying (within preconditions of each operation (function)) in the system, that this operation is only performed by users who have been given a particular role.
 
 For example, users who can add a submission are only students.  Therefore, we say, as a precondition of the operation, that \textit{“who has the role of ‘student’, can perform this operation”}.  Algorithm \ref{alg1} shows the B specification of the operation of adding a submission.
 
@@ -92,7 +92,7 @@ sod2 \subseteq ROLES   \wedge \\
 sod1 \cap sod2 = \{ \}
 \end{flalign*}
 
-Now, we can formulate the condition of Separation of Duties (SoD) using the B specification, as follows:
+Now, we can formulate the condition of Separation of Duties (SoD) using the B specification as follows:
 \begin{align*}
 \forall(u, role_1, role_2) . (u \in USER  \wedge role_1 \in sod_1 \\ \wedge role_2  \in sod_2  \wedge role_1  \in   hasTheRole[\{u\}]  \\       \Rightarrow \neg (role_2 \in hasTheRole[\{u\}] )   \\
 \wedge
