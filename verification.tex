@@ -50,7 +50,7 @@ Prp \Rightarrow[Init] I
 
 Which means that under the assumption that $Prp$ (PROPERTIES clause, if found) is true, then: the initialisation clause $Init$ must establish the invariant $I$.  To demonstrate this obligation, we apply the current values in the INITIALISATION clause to their corresponding variables in the INVARIANT clause.
 
-For each operation in the machine, there must be a separate proof obligation.  Hence, there will be proof obligations for $assignUserToRole$ and $revokeUserAssignment$ operations.  However, we will discuss only the proof obligation for $assignUserToRole$ operation.  This takes the following predicate: 
+For each operation in the machine, there must be a separate proof obligation.  Hence, there will be proof obligations for $assignUserToRole$ and $revokeUserAssignment$ operations.  The proof obligation of each operation takes the following predicate: 
 
 \begin{align*}
 I \wedge P \Rightarrow [S] I
